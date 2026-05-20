@@ -1,0 +1,79 @@
+name: L = {a^n b^2n : n >= 1}
+init: q_init
+accept: q_f
+
+// < = left
+// > = right
+// - = hold
+// use underscore for blank cells
+
+//States and symbols are case-sensitive
+
+//Load your code and click COMPILE.
+//or load an example (top-right).
+
+q_init, _
+q_PRINTN, _, -
+
+q_init, b
+q_reject, _, -
+
+q_init, a
+q_0, a, -
+
+q_0, a
+q_0, a, >
+
+q_0, b
+q_1, b, >
+
+q_1, b 
+q_1, b, >
+
+q_1, _
+q_killbill1, _, <
+
+q_killbill1, b
+q_killbill2, _, <
+
+q_killbill2, b
+q_2, _, <
+
+q_2, b
+q_2, b, <
+
+q_2, a
+q_3, a, <
+
+q_3, a
+q_3, a, <
+
+q_3, _
+q_killalice, _, >
+
+q_killalice, a
+q_0, _, >
+
+//q_killbill, _
+//q_f, _, <
+
+q_0, _
+q_fintermediate, _, >
+
+q_fintermediate, _
+q_PRINTY, _, <
+
+q_PRINTY, _
+q_PRINTE, Y, >
+
+q_PRINTE, _
+q_PRINTS, E, >
+
+q_PRINTS, _
+q_f, S, >
+
+q_PRINTN, _
+q_PRINTO, N, >
+
+q_PRINTO, _
+q_reject, O, >
