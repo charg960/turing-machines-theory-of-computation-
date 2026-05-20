@@ -1,0 +1,24 @@
+name: L{(aba)^*}
+init: q_0
+accept: q_ACCEPT
+
+q_0, _
+q_ACCEPT, _, -
+
+q_0, a
+q_FINDB, _, >
+
+q_FINDB, b
+q_FINDA, _, >
+
+q_FINDA, a
+q_CHECK, _, >
+
+q_CHECK, _
+q_ACCEPT, _, -
+
+q_CHECK, b
+q_REJECT, b, -
+
+q_CHECK, a
+q_FINDB, _, >
