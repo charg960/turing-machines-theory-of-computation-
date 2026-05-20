@@ -1,0 +1,90 @@
+name: f(x)=3x
+init: q_start
+accept: q_ACCEPT
+
+q_start, 1
+q_start, 1, >
+
+q_start, _
+q_markY, Y, <
+
+q_markY, 1
+q_markY, 1, <
+
+q_markY, _
+q_seek1, _, >
+
+q_seek1, X
+q_seek1, X, >
+
+q_seek1, 1
+q_markX, X, >
+
+q_seek1, Y
+q_cleanup1, Y, <
+
+q_markX, 1
+q_markX, 1, >
+
+q_markX, X
+q_markX, X, >
+
+q_markX, Y
+q_toEnd, Y, >
+
+q_toEnd, 1
+q_toEnd, 1, >
+
+q_toEnd, _
+q_write1, 1, >
+
+q_write1, _
+q_write2, 1, >
+
+q_write1, 1
+q_write1, 1, >
+
+q_write2, _
+q_goBack, 1, >
+
+q_write2, 1
+q_goBack, 1, <
+
+q_goBack, 1
+q_goBack, 1, <
+
+q_goBack, _
+q_goBack, _, <
+
+q_goBack, Y
+q_backLeft, Y, <
+
+q_backLeft, 1
+q_backLeft, 1, <
+
+q_backLeft, X
+q_backLeft, X, <
+
+q_backLeft, _
+q_seek1, _, >
+
+q_cleanup1, X
+q_cleanup1, X, <
+
+q_cleanup1, Y
+q_cleanup1, Y, <
+
+q_cleanup1, _
+q_cleanup2, _, >
+
+q_cleanup2, _
+q_REJECT, _, -
+
+q_cleanup2, X
+q_cleanup2, _, >
+
+q_cleanup2, Y
+q_cleanup2, _, >
+
+q_cleanup2, 1
+q_ACCEPT, 1, -
