@@ -1,0 +1,186 @@
+name: w^R
+init: q_start
+accept: q_ACCEPT
+
+q_start, _
+q_ACCEPT, _, -
+
+q_start, a
+q_FINDEND, a, >
+
+q_start, b
+q_FINDEND, b, >
+
+q_FINDEND, a
+q_FINDEND, a, >
+
+q_FINDEND, b
+q_FINDEND, b, >
+
+q_FINDEND, _
+q_FindLast, Y, <
+
+q_FindLast, a
+q_FindLast, a, <
+
+q_FindLast, Y
+q_FindLast, Y, <
+
+q_FindLast, b
+q_FindLast, b, <
+
+q_FindLast, _
+q_FindLast2, _, >
+
+q_FindLast, X
+q_FindLast, X, <
+
+q_FindLast2, _
+q_End, _, >
+
+q_FindLast2, a
+q_FindLast2, a, >
+
+q_FindLast2, b
+q_FindLast2, b, >
+
+q_FindLast2, X
+q_FOUND, X, <
+
+q_FindLast2, Y
+q_FOUND, Y, <
+
+q_FOUND, a
+q_aCHECKEND1, a, <
+
+q_FOUND, b
+q_bCHECKEND1, b, <
+
+q_End, a
+q_End, a, >
+
+q_End, b
+q_End, b, >
+
+q_End, X
+q_EndFound, X, <
+
+q_EndFound, a
+q_aCHECKEND1, X, >
+
+q_EndFound, b
+q_bCHECKEND1, X, >
+
+q_bCHECKEND1, _
+q_ENDFOUNDb, _, >
+
+q_bCHECKEND1, a
+q_bCHECKEND2, a, >
+
+q_bCHECKEND1, b
+q_bCHECKEND2, b, >
+
+q_bCHECKEND2, b
+q_b, X, >
+
+q_aCHECKEND2, a
+q_a, X, >
+
+q_bCHECKEND1, Y
+q_bCHECKEND2, Y, >
+
+q_aCHECKEND1, _
+q_ENDFOUNDa, _, >
+
+q_aCHECKEND1, a
+q_aCHECKEND2, a, >
+
+q_aCHECKEND1, b
+q_aCHECKEND2, b, >
+
+q_aCHECKEND1, Y
+q_aCHECKEND2, Y, >
+
+q_aCHECKEND2, a
+q_a, X, >
+
+q_bCHECKEND2, b
+q_b, X, >
+
+q_b, X
+q_b, X, >
+
+q_b, Y
+q_b, Y, >
+
+q_b, a
+q_b, a, >
+
+q_b, b
+q_b, b, >
+
+q_b, _
+q_FindLast, b, <
+
+q_a, X
+q_a, X, >
+
+q_a, Y
+q_a, Y, >
+
+q_a, a
+q_a, a, >
+
+q_a, b
+q_a, b, >
+
+q_a, _
+q_FindLast, a, <
+
+q_ENDFOUNDa, X
+q_ENDFOUNDa2, _, >
+
+q_ENDFOUNDa, Y
+q_ENDFOUNDa2, _, >
+
+q_ENDFOUNDa, a
+q_ENDFOUNDa, _, >
+
+q_ENDFOUNDa2, _
+q_ACCEPT, a, -
+
+q_ENDFOUNDb, X
+q_ENDFOUNDb2, _, >
+
+q_ENDFOUNDb, Y
+q_ENDFOUNDb2, _, >
+
+q_ENDFOUNDb, b
+q_ENDFOUNDb, _, >
+
+q_ENDFOUNDb2, a
+q_ENDFOUNDb2, a, >
+
+q_ENDFOUNDb2, b
+q_ENDFOUNDb2, b, >
+
+q_ENDFOUNDb2, X
+q_ENDFOUNDb2, _, >
+
+q_ENDFOUNDb2, Y
+q_ENDFOUNDb2, _, >
+
+q_ENDFOUNDa2, a
+q_ENDFOUNDa2, a, >
+
+q_ENDFOUNDa2, b
+q_ENDFOUNDa2, b, >
+
+q_ENDFOUNDa2, X
+q_ENDFOUNDa2, _, >
+
+q_ENDFOUNDa2, Y
+q_ENDFOUNDa2, _, >
+
+q_ENDFOUNDb2, _
+q_ACCEPT, b, -
